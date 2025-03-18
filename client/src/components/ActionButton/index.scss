@@ -1,0 +1,23 @@
+@import "../../app.scss";
+
+.action-button {
+  background-color: $primary-color;
+  color: $text-color-light;
+  border-radius: $border-radius;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+  &.secondary {
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+  
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+

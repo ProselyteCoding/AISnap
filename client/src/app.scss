@@ -1,0 +1,167 @@
+@import "~taro-ui/dist/style/index.scss";
+
+// Global variables
+$primary-color: #6a5acd;
+$secondary-color: #f0f0f0;
+$text-color: #333;
+$text-color-light: #fff;
+$background-color: #fff;
+$background-color-dark: #222;
+$border-radius: 8px;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+// Global styles
+page {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+// Dark mode
+.dark {
+  background-color: $background-color-dark;
+  color: $text-color-light;
+}
+
+// Common utility classes
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 20px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: $border-radius;
+}
+
+.shadow {
+  box-shadow: $box-shadow;
+}
+
+// Custom components
+.title-bar {
+  background-color: $primary-color;
+  color: $text-color-light;
+  padding: 10px 20px;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-preview {
+  padding: 30px;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  box-shadow: $box-shadow;
+  margin: 20px 0;
+  
+  &.default {
+    border: 1px solid #eaeaea;
+  }
+  
+  &.gradient {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  .window-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    
+    .control {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      
+      &.red {
+        background-color: #ff5f56;
+      }
+      
+      &.yellow {
+        background-color: #ffbd2e;
+      }
+      
+      &.green {
+        background-color: #27c93f;
+      }
+    }
+  }
+  
+  .content-text {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+.dark {
+  .content-preview {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    border-color: #444;
+    
+    &.gradient {
+      background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    }
+  }
+}
+
+.action-button {
+  background-color: $primary-color;
+  color: $text-color-light;
+  border-radius: $border-radius;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+  &.secondary {
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+

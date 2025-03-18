@@ -1,0 +1,64 @@
+@import "../../app.scss";
+
+.index-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+  .title-bar {
+    .title-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      
+      .title-text {
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .content-textarea {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    
+    .export-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  }
+}
+
+// Customize Taro UI components
+.at-tabs__item--active {
+  color: $primary-color;
+}
+
+.at-tabs__item-underline {
+  background-color: $primary-color;
+}
+
+.at-tabs-pane {
+  padding: 20px 0;
+}
+
